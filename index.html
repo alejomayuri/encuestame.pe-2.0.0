@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Encuestame.pe</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/code.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="img/logo_slogan_color.png" alt=""></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <a href="#quienes-somos"><li>¿Quienes somos?</li></a>
+                <a href="#ganadores"><li>Ganadores</li></a>
+                <a href="#productos"><li>Productos</li></a>
+                <a href="#contacto"><li>Contacto</li></a>
+                <a href="#consulta"><li>Consulta tu saldo</li></a>
+            </ul>
+        </div>
+        <div class="redes">
+            <a href="https://www.facebook.com/encuestamepetuopinionvale/" target="_blank"><img src="img/logotipo-circular-de-facebook.png" alt=""></a>
+        </div>
+    </header>
+    <main class="Main">
+        <section class="portada">
+            <video preload="true" autoplay muted="muted" loop="loop" class="video-portada">
+				<source src="video/portada.mp4"> 
+			</video>
+        </section>
+        <section id="quienes-somos" class="container info-encuestamepe">
+            <h2>¿Qué es encuestame.pe?</h2>
+            <p>Somos una empresa peruana que cuenta con profesionales con más de 10 años de experiencia en estudios sociales. Utilizamos diversos algoritmos y enfoques para lograr obtener información representativa y válida. Nos enfocamos en diseños experimentales y semi-experimentales.</p>
+            <!--Descripción-->
+        </section>
+        <section class="container-cifras">
+            <div class="cifras">
+                <div class="cifras-site">
+                    <div class="cifras-bloque num cifra-1">
+                        <div class="auto num-text">
+                            <span class="counter" data-count="9">0</span>
+                            <p>Encuestas han sido realizadas</p>
+                            <div class="icono">
+                                <img src="img/encuesta.png" alt="" width="70px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cifras-bloque num cifra-2">
+                        <div class="auto num-text">
+                            <span class="counter" data-count="8032">0</span>
+                            <p>Personas han participado</p>
+                            <div class="icono">
+                                <img src="img/apoyo.png" alt="" width="70px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cifras-bloque num cifra-3">
+                        <div class="auto num-text">
+                            <span class="counter" data-count="2200">0</span>
+                            <p>Soles han sido repartidos en premios</p>
+                            <div class="icono">
+                                <img src="img/dinero.png" alt="" width="70px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="ganadores" class="container container-videos">
+            <h2>Conoce a algunos de nuestros ganadores</h2>
+            <div class="videos">
+                <!--Videos de ganadores-->
+                <figure>
+                    <video src="video/Ruben.mp4" style="height: 500px !important;" preload="true" controls width="280px"></video>
+                    <p>Rubén Veintimilla Johnson</p>
+                </figure>
+                <figure>
+                    <video src="video/RoxanaCastillo.mp4" preload="true" controls width="280px"></video>
+                    <p>Roxana Castillo</p>
+                </figure>
+                <figure>
+                    <video src="video/ZoilaCasusol.mp4" preload="true" controls width="280px"></video>
+                    <p>Zoila Casusol</p>
+                </figure>
+            </div>
+        </section>
+        <section id="productos" class="container container-productos">
+            <h2>¿Que ofrecemos?</h2>
+            <div class="productos">
+                <!--Videos de ganadores-->
+                <div class="product product-1">
+                    <h3>EXPERIMENTOS</h3>
+                    <p>Diseñamos e implementamos experimentos usando  herramientas de aleatorización de Facebook, como imágenes, frases, enlaces, etc. Podemos ayudarte a encontrar cuál es el mensaje o imagen  más efectiva para COMUNICAR TU IDEA, NEGOCIO o PROBAR HIPÓTESIS de estudios.</p>
+                    <a href="#">SABER MÁS <img src="img/flecha-correcta.png" alt=""></a>
+                </div>
+                <div class="product product-2">
+                    <h3>ENCUESTAS DE OPINIÓN</h3>
+                    <p>Nuestra metodología nos permite RECOGER OPINIONES en cada región, grupo etáreo, sexo, etc. Trabajamos contigo para diseñar y obtener una muestra balanceada según los segmentos de tu interés. Aplicamos el cuestionario que hayas preparado o te podemos ayudar a diseñarlo; contactanos.</p>
+                    <a href="#">SABER MÁS <img src="img/flecha-correcta.png" alt=""></a>
+                </div>
+                <div class="product product-3">
+                    <h3>ENCUESTAS PANEL</h3>
+                    <p>Te ayudamos a CONSTRUIR TU MUESTRA PANEL. Usando nuestras herramientas de segmentación construimos una muestra panel para ESTUDIOS DE OPINIÓN / MERCADO / INVESTIGACIÓN que deseas realizar. Esta herramienta es ideal si quieres monitorear cambios de percepciones, ideas, etc.</p>
+                    <a href="#">SABER MÁS <img src="img/flecha-correcta.png" alt=""></a>
+                </div>
+            </div>
+        </section>
+        <section id="consulta" class="full-w">
+            <h2>Consulta tu saldo</h2>
+            <p>Conoce cuanto has acumulado respondiendo encuestas</p>
+            <button id="consulta-button">Consulta aquí</button>
+        </section>
+        <section id="contacto" class="container contacto">
+            <h2>Ponte en contacto con nosotros</h2>
+            <p>Escríbenos a <span>contacto@encuestame.pe</span></p>
+            <!--<form action="enviar.php" method="post">
+                <input name="mail" type="text" placeholder="Email">
+                <input name="name" type="text" placeholder="Nombre y apellido">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Enviar">
+            </form>-->
+        </section>
+    </main>
+
+
+
+    <main class="consultaSaldoMain">
+        <div class="container consulta-main">
+            <h2>Participa en nuestras encuestas, acumula ganancias y entra al sorteo por premios de S/.100, S/.200, S/.300 ¡y hasta S/.800!</h2>
+            <div class="tags">
+                <div class="tag">
+                    <span>#PremioMayor</span>
+                    <p>Completa una encuesta y participa automáticamente en los sorteos.</p>
+                </div>
+                <div class="tag">
+                    <span>#FielSeguidor</span>
+                    <p>Los primeros 100 en responder una encuesta acumulan S/.1 automáticamente</p>
+                </div>
+                <div class="tag">
+                    <span>#FielEnPotencia</span>
+                    <p>Del 101 al 200 en llenar una encuesta acumulan S/.0,50 automáticamente</p>
+                </div>
+            </div>
+            <div class="container-main">
+                <div class="container-form container-element">
+                    <div>
+                        <p>¿Cuánto vas acumulando?</p>
+                        <span>Correo electrónico o número de teléfono</span>
+                        <form action="">
+                            <input id="input_usuario" type="text" name="dato">
+                            <button id="contactSend">Consultar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="respuesta">
+            <p class="result">Cargando...</p>
+            <!-- <p class="aviso">
+                El premio mayor se transfiere inmediatamente al ganador. Para cobrar lo recaudado en #Fiel Seguidor y #FielEnPotencia debes acumular mínimo S/.3. Podrán ser transferidos a tu cuenta (BCP/BBVA) o también vía Yape y Plin.
+            </p> -->
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/logo_slogan_color.png" alt="">
+            </div>
+            <div class="footer-row">
+                <a target="_blank" href="https://docs.google.com/document/d/1II7LwPqR62NVXErdiPKcfcX_ELLuN2fiKZrW6FVeBp0/edit"><p>Términos y condiciones</p></a>
+                <a href="#"><p>Calle Los Álamos Mza. F31 Lote. 12, Urb. Santa María, 4ta etapa Lima - Lima - Carabayllo Lima, Perú.</p></a>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/encuestamepetuopinionvale/" target="_blank"><img src="img/logotipo-circular-de-facebook.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
